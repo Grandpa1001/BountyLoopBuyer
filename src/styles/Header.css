@@ -1,0 +1,78 @@
+#Label{
+    color:white;
+    padding-right: 30px;
+    font-size:20px;
+    padding-right:80px;
+    margin-left: auto;
+    padding-right: 86px;
+    }
+
+    #wallet {
+ 
+        max-width: 300px;
+        color:white;
+        font-family: 'Dogica', sans-serif;
+        line-height: 1.5;
+        white-space: pre-line;
+    
+    }
+
+#Header{
+    display: block;
+    padding-top: 30px;
+    padding-right: 100px;
+   }
+   #walletContainer{
+    display: flex;
+    padding-left:100px;
+   }
+
+   #logoNameContainer{
+    display: flex;
+    margin-right: 10px;
+   }
+
+#logo {
+    max-height: 28px;
+    max-width: 28px;
+    margin-right: 20px;
+    margin-left:20px;
+  }
+
+  @media (max-width:600px) {
+    #logo{
+    padding-right: 10px;
+    display:none;
+        }
+    #Header{
+        display:block;
+        padding-right: 0px;
+  
+            }
+    #Label{
+    font-size: 14px;
+    padding-right: 0px;
+    padding-top:20px;
+    margin:auto;
+           }
+
+    #wallet{
+        padding-top:10px;
+        padding-bottom:10px;
+        margin:auto;
+    }
+    #walletContainer{
+        padding:0px;
+        margin:auto
+       }
+
+       #logoNameContainer{
+        display: flex;
+        margin-right: 0px;
+       }
+
+    }
+
+
+
+  

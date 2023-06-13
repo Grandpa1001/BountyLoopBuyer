@@ -1,0 +1,229 @@
+
+
+.button{
+  background-image: url('./../assets/button.png');
+  margin:0;
+  font-family: 'Dogica', sans-serif;
+  width: 322px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  font-size:30px;
+  background-color: black;
+  border: black;
+  margin:auto;
+}
+
+
+#buttonGrid{
+  display:flex;
+  padding-top: 14px;
+  padding-bottom:18px;
+}
+
+#metamaskEmpty{
+  color:white;
+  text-align: center;
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  width: 322px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-image: url('./../assets/metamask.png');
+  background-color: black;
+  border: black;
+  margin:auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+  #metamaskEmpty {
+    background-image: url('./../assets/mintPC.png');
+     }
+}
+
+#whiteListClock{
+  display: block;
+  color:white;
+  padding-bottom:20px;
+}
+
+#labeTime{
+  color:#fb97c9;
+  font-family: 'Dogica', sans-serif;
+  font-size: 14px;
+  margin:auto;
+  white-space: pre-line;
+  text-align: center;
+ }
+
+ #labelWhiteListClock{
+  padding-top:2px;
+  color:#fb97c9;
+  font-family: 'Dogica', sans-serif;
+  font-size: 20px;
+  margin:auto;
+  text-align: center;
+ }
+ #labelClock{
+  
+  color:#fb97c9;
+  font-family: 'Dogica', sans-serif;
+  font-size: 36px;
+  margin:auto;
+  text-align: center;
+ }
+
+
+
+#freeMintSoldOut{
+  color:white;
+  text-align: center;
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  width: 322px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-image: url('./../assets/1_1.png');
+  background-color: black;
+  border: black;
+  margin:auto;
+}
+
+#paidMintSoldOut{
+  color:white;
+  text-align: center;
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  width: 322px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-image: url('./../assets/sold_out.png');
+  background-color: black;
+  border: black;
+  margin:auto;
+}
+#endOfMintCharacter{
+  color:white;
+  text-align: center;
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  width: 322px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-image: url('./../assets/minted10.png');
+  background-color: black;
+  border: black;
+  margin:auto;
+}
+
+
+
+
+#minting{
+  color:white;
+  text-align: center;
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  width: 322px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-image: url('./../assets/minting.gif');
+  background-color: black;
+  border: black;
+  margin:auto;
+}
+
+
+
+
+#buttonGrid2{
+  display:flex;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+#amountBlock{
+  display:flex;
+  margin:auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+}
+
+#amountLabel{
+  background-image: url('./../assets/amount.png');
+  font-family: 'Dogica', sans-serif;
+  width: 93px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  font-size:30px;
+  background-color: black;
+  text-align: center;
+  padding-top: 34px;
+  padding-left: 4px;
+}
+
+#endOfMint {
+  background-image: url('./../assets/amountcheck.png');
+  width: 93px; /* Ustawienie szerokości przycisku */
+  height:  92px; /* Ustawienie wysokości przycisku */
+  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  margin: auto;
+}
+
+
+
+#buttonCount{
+  margin:auto;
+  background-color: black;
+  border: black;
+  color:white;
+  font-size:60px;
+  padding-left: 20px;
+  padding-right:20px;
+}
+
+
+#buttonCountMinus{
+  margin:auto;
+  background-color: black;
+  border: black;
+  color:white;
+  font-size:60px;
+  padding-left: 20px;
+  padding-right:20px;
+  padding-bottom: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#errorMSG{
+  color:red;
+  text-align:center;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top:40px;
+  margin-bottom:-60px;
+  font-family: 'Arial', sans-serif;
+}
+
+#price{
+  padding-top:20px;
+}
+
+
+#labelMint{
+  color:white;
+  margin:auto;
+  
+}

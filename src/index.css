@@ -1,0 +1,47 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #202020;
+  --clr-grey: #c4c4c4;
+  --clr-grey-2: #8f8f8f;
+}
+
+@font-face {
+  font-family: 'Dogica';
+  src: url('./fonts/dogica.ttf') format('truetype');
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Dogica';
+  background-color: #000000;
+}
+
+
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 10px;
+    margin: 0 auto;
+    width: 100%;
+    color:white;
+    text-align:right;
+    font-size:12px;
+    height: 20px; /* dowolna wysokość */
+  }
+
+.sticky-link{
+  color:red;
+  margin-right:20px;
+}
+
+
