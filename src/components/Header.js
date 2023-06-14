@@ -10,7 +10,7 @@ import { openSeaLink} from './../config.js'
 
 
 //class Header extends Component {
-  const Header = ({ currentAccount, saleState }) => {
+  const Header = ({ currentAccount}) => {
     return (
     <div id="Header" >
       {currentAccount !== "" ?
@@ -21,9 +21,9 @@ import { openSeaLink} from './../config.js'
       : null
       }
       <div id="logoNameContainer">
-      <div id="Label">Cryptomazons</div>
-      <a href="https://twitter.com/Cryptomazons"><img id="logo" src={logo1} alt="Logo"/></a>
-      {saleState === false ? "" : (currentAccount === "" ? "" : <a href={openSeaLink}><img id="logo" src={logo2} alt="Logo"/></a>)}
+      <div id="Label">BountyLoop</div>
+      <a href="https://twitter.com/BountyLoop"><img id="logo" src={logo1} alt="Logo"/></a>
+      <a href={openSeaLink}><img id="logo" src={logo2} alt="Logo"/></a>
       </div>
     </div>
     );

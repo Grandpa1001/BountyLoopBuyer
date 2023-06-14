@@ -1,28 +1,25 @@
 import React from 'react';
 import './../styles/Body.css';
 import logo1 from './../assets/mazon.gif';
-import logo2 from './../assets/logo.png';
+import logo2 from './../assets/logo.jpeg';
 
 
-const Body = ({ saleState, metaMask }) => {
+const Body = ({ metaMask }) => {
     return (
       <div>
         <div id="Body">
         <div id="logoText">
-                <p>A collection of 5000</p> 
-                PFPs Cryptomazons,
-                employees of the largest upcoming nft organization.
+                <p>Jesteś w trakcie kupna</p> 
                 <div id="paragraf">
-                    <p>Max 1 free/ wallet</p> 
-                    Rest 0,003
+                    <p>Produktu który wspiera</p> 
                 </div>
                 <div id="paragraf">
-                    <p>Max 5/ transaction</p> 
-                    <p>Max 10/wallet</p> 
-                    100 reserved for team
+                    <p>Klikając kup</p> 
+                    <p>Przelejesz krypto na smartcontract</p> 
+                    Zasilając w ten sposób konto
                 </div>
                 <div id="paragraf">
-                    Mint date: TBA 
+                    akcji charytatywnej
                 </div>
         </div>
         <img id="connectImg" src={logo1} alt="Connect1" />
