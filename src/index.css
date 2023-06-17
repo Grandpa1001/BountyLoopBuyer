@@ -12,15 +12,8 @@
   --clr-grey-2: #8f8f8f;
 }
 
-@font-face {
-  font-family: 'Dogica';
-  src: url('./fonts/dogica.ttf') format('truetype');
-
-}
-
 body {
   margin: 0;
-  font-family: 'Dogica';
   background-color: #000000;
 }
 

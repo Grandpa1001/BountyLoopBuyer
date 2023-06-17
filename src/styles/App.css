@@ -1,25 +1,69 @@
 
 
-.button{
-  background-image: url('./../assets/button.png');
-  margin:0;
+#logoText {
+ 
+  width:  300px;
+  color:white;
   font-family: 'Dogica', sans-serif;
-  width: 322px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  font-size:30px;
-  background-color: black;
-  border: black;
+  line-height: 1.5;
+  font-size: 20px;
+  margin:auto;
+  text-align: right;
+  white-space: pre-line;
+  margin-top: 10px;
+}
+
+#logoTextCenter{
+  color:white;
+  font-family: 'Dogica', sans-serif;
+  line-height: 1.5;
+  font-size: 24px;
+  margin:auto;
+  white-space: pre-line;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+#introView{
+  color:white;
+  font-family: 'Dogica', sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+  margin:auto;
+}
+
+#introImgView{
   margin:auto;
 }
 
 
+#campImg {
+  max-width: 100px;
+  max-height: 100px;
+  margin:auto;
+ }
+
+#connectImg {
+  width: 300px;
+  max-height: 300px;
+  margin:auto;
+ }
+
+#bodySlotGrid{
+  display:flex;
+  width:  300px;
+  margin: auto;
+}
+
+ #introGrid {
+  display:flex;
+ }
+
 #buttonGrid{
   display:flex;
-  padding-top: 14px;
-  padding-bottom:18px;
+  padding-top: 20px;
+  padding-bottom:20px;
 }
 
 #metamaskEmpty{
@@ -36,6 +80,20 @@
   margin:auto;
 }
 
+
+.okragla-kontrolka {
+  margin:auto;
+  width: 200px; /* Dowolna szerokość */
+  height: 200px; /* Dowolna wysokość */
+  border-radius: 50%; /* Ustawienie okrągłego kształtu */
+  overflow: hidden; /* Ukrycie części obrazka, które wykraczają poza kontrolkę */
+}
+
+.okragla-kontrolka img {
+  width: 100%; /* Dostosowanie szerokości zdjęcia do kontrolki */
+  height: 100%; /* Dostosowanie wysokości zdjęcia do kontrolki */
+  object-fit: cover; /* Dopasowanie zdjęcia do rozmiaru kontrolki */
+}
 
 @media only screen and (max-width: 768px) {
   #metamaskEmpty {
@@ -119,6 +177,13 @@
 }
 
 
+#Body{
+  display: flex;
+  margin-top:80px;
+  margin-left:200px;
+  margin-right:200px;
+  margin-bottom:40px;
+ }
 
 
 #minting{
@@ -227,3 +292,76 @@ button:hover {
   margin:auto;
   
 }
+
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  33% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.button {
+  align-items: center;
+  background: #fc8823;
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.1);
+  border-radius: 5px;
+  height: 45px;
+  width: 200px;
+  padding: 0 30px;
+  color: #fff;
+  font-family: Lato, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .3s, transform .3s, box-shadow .3s;
+   will-change: transform;
+  
+  &:hover {
+    background: darken(#C06C84,10%);
+    box-shadow: 0 4px 17px rgba(0,0,0,0.2);
+    transform: translate3d(0, -2px, 0);
+  }
+  &:active {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    transform: translate3d(0, 1px, 0);
+  }
+}
+
+.pulse {
+ 
+  margin: auto;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.4);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    margin: auto;
+  }
+  &:before {
+    animation: pulse 1.5s infinite linear;
+  }
+  &:after {
+    animation: pulse 2s .4s infinite linear;
+  }
+  &:hover:before, &:hover:after {
+    display: none;
+  }
+}
+
+
