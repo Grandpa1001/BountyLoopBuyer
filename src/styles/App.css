@@ -37,6 +37,10 @@
   margin:auto;
 }
 
+#exitView{
+display:grid;
+}
+
 
 #campImg {
   max-width: 100px;
@@ -97,8 +101,9 @@
 
 @media only screen and (max-width: 768px) {
   #metamaskEmpty {
-    background-image: url('./../assets/mintPC.png');
-     }
+
+    visibility: visible;
+}
 }
 
 #whiteListClock{
@@ -134,49 +139,6 @@
  }
 
 
-
-#freeMintSoldOut{
-  color:white;
-  text-align: center;
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  width: 322px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-image: url('./../assets/1_1.png');
-  background-color: black;
-  border: black;
-  margin:auto;
-}
-
-#paidMintSoldOut{
-  color:white;
-  text-align: center;
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  width: 322px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-image: url('./../assets/sold_out.png');
-  background-color: black;
-  border: black;
-  margin:auto;
-}
-#endOfMintCharacter{
-  color:white;
-  text-align: center;
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  width: 322px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-image: url('./../assets/minted10.png');
-  background-color: black;
-  border: black;
-  margin:auto;
-}
-
-
 #Body{
   display: flex;
   margin-top:80px;
@@ -184,24 +146,6 @@
   margin-right:200px;
   margin-bottom:40px;
  }
-
-
-#minting{
-  color:white;
-  text-align: center;
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  width: 322px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-image: url('./../assets/minting.gif');
-  background-color: black;
-  border: black;
-  margin:auto;
-}
-
-
-
 
 #buttonGrid2{
   display:flex;
@@ -216,32 +160,6 @@
   justify-content: center;
   height: 100%;
 
-}
-
-#amountLabel{
-  background-image: url('./../assets/amount.png');
-  font-family: 'Dogica', sans-serif;
-  width: 93px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  font-size:30px;
-  background-color: black;
-  text-align: center;
-  padding-top: 34px;
-  padding-left: 4px;
-}
-
-#endOfMint {
-  background-image: url('./../assets/amountcheck.png');
-  width: 93px; /* Ustawienie szerokości przycisku */
-  height:  92px; /* Ustawienie wysokości przycisku */
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  background-position: center;
-  background-size: cover;
-  background-color: black;
-  margin: auto;
 }
 
 
@@ -336,6 +254,13 @@ button:hover {
   }
 }
 
+.block {
+  pointer-events: none;
+  background-color: rgb(164, 133, 133);
+  margin: auto;
+  margin-bottom: 0px;
+}
+
 .pulse {
  
   margin: auto;
@@ -364,4 +289,52 @@ button:hover {
   }
 }
 
-
+.wrapper{
+  position:absolute;
+  top:20%;
+  left:50%;
+  opacity: 0.5;
+  transform:translate(-50%, -50%); 
+}
+.circle{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fcdc29;
+  border-radius: 50%;
+  animation: loading 1.5s cubic-bezier(.8, .5, .2, 1.4) infinite;
+  transform-origin: bottom center;
+  position: relative;
+}
+@keyframes loading{
+  0%{
+    transform: translateY(0px);
+    background-color: #fcdc29;
+  }
+  50%{
+    transform: translateY(25px);
+    background-color: #ef584a;
+  }
+  100%{
+    transform: translateY(0px);
+    background-color: #fcdc29;
+  }
+}
+.circle-1{
+  animation-delay: 0.1s;
+}
+.circle-2{
+  animation-delay: 0.2s;
+}
+.circle-3{
+  animation-delay: 0.3s;
+}
+.circle-4{
+  animation-delay: 0.4s;
+}
+.circle-5{
+  animation-delay: 0.5s;
+}
+.circle-6{
+  animation-delay: 0.6s;
+}
