@@ -1,6 +1,6 @@
 import React from 'react';
 import './../styles/Header.css';
-import logo1 from './../assets/tt.png';
+
 import adress from './../assets/adress.png';
 
 
@@ -19,10 +19,6 @@ import adress from './../assets/adress.png';
       </div>
       : null
       }
-      <div id="logoNameContainer">
-      <div id="Label">BountyLoop</div>
-      <a href="https://twitter.com/BountyLoop"><img id="logo" src={logo1} alt="Logo"/></a>
-      </div>
     </div>
     );
   }

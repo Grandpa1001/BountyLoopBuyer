@@ -23,7 +23,7 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState('')
   const [zaplacone, setZaplacone] = useState(false)
   const [correctNetwork, setCorrectNetwork] = useState(false)
-
+  const [loading, setLoading] = useState(true);
   
   const data = {
     products: [
@@ -68,7 +68,7 @@ const App = () => {
       }
   }
 
-
+  
   const getKursETH = useCallback(() => {
     axios.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=pln')
       .then(response => {
@@ -79,8 +79,6 @@ const App = () => {
         }
       });
   }, [kwota]);
-
-
 
 
         // Checks if wallet is connected
@@ -138,13 +136,14 @@ const App = () => {
 
 useEffect(() => {
     const interval = setInterval(() => {
+        setLoading(false);
         const isZaplacone = localStorage.getItem('zaplacone');
         if (isZaplacone) {
           setZaplacone(true);
         }
       checkIfWalletIsConnected();
       getKursETH();
-    }, 5000);
+    }, 6000);
   
     return () => {
       clearInterval(interval);
@@ -285,7 +284,12 @@ const zaplaconoView =() => (
       <div id="App">
 
       <Header currentAccount={currentAccount} />   
-      
+      {loading ? (
+      <div id="loadingScreen">
+        <div className="loadingScreenLabel">Przygotowanie płatności </div><div>-----</div>
+        <div className="loadingAnimation"></div>
+      </div>
+    ) : null}
       {metamaskOwner === true ? ( currentAccount === "" ? noLogView() : (   zaplacone ===true ? zaplaconoView() : campValue()) ) : ""}
       {correctNetwork === false &&  currentAccount !== ""? <div id="buttonGrid2"><div id="labelMint">ERROR CHAIN - Change chain to Ethereum</div></div> : ""} 
       <div>
