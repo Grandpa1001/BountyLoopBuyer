@@ -1,7 +1,6 @@
 
 
 #logoText {
- 
   width:  300px;
   color:white;
   font-family: 'Dogica', sans-serif;
@@ -11,9 +10,11 @@
   text-align: right;
   white-space: pre-line;
 }
+
 #logoTextTitle {
   font-size: 20px;
 }
+
 #dopisek {
   font-size: 14px;
   color:white;
@@ -111,6 +112,12 @@ display:grid;
 
     visibility: visible;
 }
+#bodySlotGrid{
+  width:  120px;
+  margin-left:10px;
+  margin-right:10px
+}
+
 }
 
 #whiteListClock{
@@ -153,6 +160,31 @@ display:grid;
   margin-right:200px;
   margin-bottom:40px;
  }
+
+
+ @media only screen and (max-width: 768px) {
+  #Body {
+    width: 30%;
+    height: 30%;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    visibility: visible;
+  }
+
+  #connectImg {
+    width: 100px;
+    max-height: 100px;
+   }
+
+   .okragla-kontrolka {
+    width: 100px;
+    height: 100px;
+}
+
+}
+
 
 #buttonGrid2{
   display:flex;
