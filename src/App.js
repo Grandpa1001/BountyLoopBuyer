@@ -16,6 +16,7 @@ const App = () => {
   const [camp, setCamp] = useState('')
   const [param, setParam] = useState('')
   const [kwota, setKwota] = useState('')
+  const [brakParametrow, setBrakParametrow] = useState(false)
   const [nazwaProduktu, setNazwaProduktu] = useState('')
   const [paramSKU, setParamSKU] = useState('')
   const [kurs, setKurs] = useState(0)
@@ -70,6 +71,8 @@ const App = () => {
                   const queryParams = new URLSearchParams(window.location.search);
                   const campID = queryParams.get('campID');
                   const skuID = queryParams.get('SKU');
+                  if(campID ===null || skuID === null){setBrakParametrow(true)}
+                  else{
                   const findSymbol = data.products.find(product => product.symbol === skuID);
                   const cenaValue = findSymbol.price;
                   setZdjecieProduktu(findSymbol.url)
@@ -78,6 +81,7 @@ const App = () => {
                   setParam(campID);
                   setParamSKU(skuID);
                   checkIfWalletIsConnected();
+                }
                    
       } catch (error) {
           console.log('Error connecting to metamask', error)
@@ -122,9 +126,10 @@ const App = () => {
                   const signer = provider.getSigner()
                   const nftContract = new ethers.Contract(nftContractAddress, NFT, signer)
                   const queryParams = new URLSearchParams(window.location.search);
-                  
                   const campID = queryParams.get('campID');
                   const skuID = queryParams.get('SKU');
+                  if(campID ===null || skuID === null){setBrakParametrow(true)}
+                  else{
                   const findSymbol = data.products.find(product => product.symbol === skuID.toString());
                   const cenaValue = findSymbol.price;
                   setZdjecieProduktu(findSymbol.url)
@@ -135,6 +140,7 @@ const App = () => {
                   setParamSKU(skuID);
                   const techCamp = await nftContract.getCampaign(campID)
                   setCamp(techCamp) 
+                }
               } else {
                   console.log('No authorized account found')
                   //setCurrentAccount("");
@@ -298,7 +304,7 @@ const zaplaconoView =() => (
   </div>
   );
 
-
+if(brakParametrow === false){
     return (
       <div id="App">
 
@@ -318,7 +324,19 @@ const zaplaconoView =() => (
 
       </div>
     );
-  
+  }else {
+    return(
+    <div id="App">
+      <div id="loadingScreen">
+        <div className="loadingScreenLabel">Brak parametrów płatności, wróć do BountyLoop</div><div>-----</div>
+        <div className="loadingAnimation"></div>
+      </div>
+  </div>
+  )
+  }
+
+
+
 }
 
 export default App;
