@@ -117,7 +117,7 @@ const App = () => {
                   setCorrectNetwork(false)
               } else {
                   setCorrectNetwork(true)
-              }
+             
               if (accounts.length !== 0) {
                   console.log('Found authorized Account: ', accounts[0])
                   setCurrentAccount(accounts[0])
@@ -145,6 +145,7 @@ const App = () => {
                   console.log('No authorized account found')
                   //setCurrentAccount("");
               }
+            }
 
           } else {
               console.log('No Wallet found. Connect Wallet')
@@ -316,7 +317,7 @@ if(brakParametrow === false){
       </div>
     ) : null}
       {metamaskOwner === true ? ( currentAccount === "" ? noLogView() : (   zaplacone ===true ? zaplaconoView() : campValue()) ) : ""}
-      {correctNetwork === false &&  currentAccount !== ""? <div id="buttonGrid2"><div id="labelMint">ERROR CHAIN - Change chain to Ethereum</div></div> : ""} 
+      {correctNetwork === false &&  currentAccount !== ""? <div id="buttonGrid2"><div id="labelMint">ERROR CHAIN - Change chain to SEPOLIA</div></div> : ""} 
       <div>
       {metamaskOwner === true ? ( currentAccount === "" ? renderNotConnectedContainer() : (zaplacone === false ? renderMintUI() : "") ) : <div id="metamaskEmpty" /> }
       </div>
